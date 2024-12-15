@@ -16,7 +16,7 @@ The app is responsive and adjusts its layout to look good on both desktop and mo
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
+- Node.js (tested on v20)
 - Yarn package manager
 
 ### Steps to Install and Run the Project
