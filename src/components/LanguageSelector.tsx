@@ -1,11 +1,5 @@
-import {
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { languageList } from "../languageList";
 
 type LanguageSelectorProps = {
   language: string;
@@ -16,21 +10,19 @@ export function LanguageSelector({
   language,
   setLanguage,
 }: LanguageSelectorProps) {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
-
   return (
-    <FormControl sx={{ width: isDesktop ? "120px" : undefined }}>
-      <InputLabel id="demo-simple-select-label">Language</InputLabel>
+    <FormControl sx={{ width: { md: "120px" } }}>
+      <InputLabel id="language-label">Language</InputLabel>
       <Select
-        labelId="demo-simple-select-label"
-        id="demo-simple-select"
+        labelId="language-label"
+        id="language"
         value={language}
         label="Language"
         onChange={(e) => setLanguage(e.target.value)}
       >
-        <MenuItem value="go">Go</MenuItem>
-        <MenuItem value="python">Python</MenuItem>
+        {languageList.map((language) => (
+          <MenuItem value={language.key}>{language.label}</MenuItem>
+        ))}
       </Select>
     </FormControl>
   );

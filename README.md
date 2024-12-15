@@ -25,13 +25,13 @@ The app is responsive and adjusts its layout to look good on both desktop and mo
 
    ```bash
    git clone <repository-url>
-   cd <repository-directory>
+   cd code-editor
    ```
 
 2. Install the dependencies:
 
    ```bash
-   yarn install
+   yarn install --frozen-lockfile
    ```
 
 3. Start the development server:
