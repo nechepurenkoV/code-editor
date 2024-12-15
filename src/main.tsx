@@ -4,9 +4,7 @@ import "./index.css";
 import App from "./App.tsx";
 import { makeServer } from "./server.ts";
 
-if (import.meta.env.DEV) {
-  makeServer();
-}
+makeServer();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
