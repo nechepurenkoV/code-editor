@@ -24,7 +24,7 @@ The app is responsive and adjusts its layout to look good on both desktop and mo
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/nechepurenkoV/code-editor.git
    cd code-editor
    ```
 
